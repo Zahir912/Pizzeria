@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Usuarios</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand">Pizzeria</div>
+        <ul class="nav-links">
+            <li><a href="/">Iniciar sesion</a></li>
+            <li><a href="/register">Registro</a></li>
+            <li><a href="/inicio">Pizzas</a></li>
+            <li><a href="/usuarios">Usuarios</a></li>
+            <li><a href="/pedidos">Pedidos</a></li>
+        </ul>
+    </nav>
+
+    <section class='user-form'>
+        <table class="'table">
+            <thead>
+                <tr>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Número de Teléfono</th>
+
+                </tr>
+            </thead>
+
+            {% for usuario in usuarios %}
+            <tbody>
+                <td>{{ usuario['Correo'] }} </td>
+                <td>{{ usuario['Contraseña'] }}</td>
+                <td>{{ usuario['Nombre'] }}</td>
+                <td>{{ usuario['Direccion'] }}</td>
+                <td>{{ usuario['Nro_telefono'] }}</td>
+                <!--<td><a href="{{ url_for('delete', correo=usuario['Correo']) }}">Eliminar</a></td>-->
+            </tbody>
+            {% endfor %}
+
+        </table>
+    </section>
+
+    <section class="user-form">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                    <th>Nombre</th>
+                    <th>Número de Teléfono</th>
+                    <th>Eliminar usuario</th>
+                    <th>Modificar dirección</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario['Correo'] }}</td>
+                    <td>{{ usuario['Contraseña'] }}</td>
+                    <td>{{ usuario['Nombre'] }}</td>
+                    <td>{{ usuario['Nro_telefono'] }}</td>
+                    <td>
+                        <a href="{{ url_for('delete_usuario', correo=usuario['Correo']) }}">Eliminar</a>
+                    </td>
+                    <td>
+                        <form action="{{ url_for('editar_direccion', correo=usuario['Correo']) }}" method="post">
+                            <label for="nueva_direccion">Modificar su direccion</label>
+                            <input type="text" name="nueva_direccion" value="{{ usuario['Direccion'] }}" required>
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    
+</body>
+
+</html>

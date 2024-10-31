@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento -->
+<html lang="en">
+  <!-- Etiqueta raíz del documento con especificación de idioma -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Etiqueta de viewport para dispositivos móviles -->
+    <title>Pizzeria</title>
+    <!-- Título de la página -->
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/3132/3132693.png"
+    />
+    <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="/static/styles.css" />
+    <!-- Enlace al archivo CSS (ruta ajustada) -->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">Pizzeria</div>
+      <ul class="nav-links">
+          <li><a href="/">Iniciar sesion</a></li>
+          <li><a href="/register">Registro</a></li>
+          <li><a href="/inicio">Pizzas</a></li>
+          <li><a href="/usuarios">Usuarios</a></li>
+          <li><a href="/pedidos">Pedidos</a></li>
+      </ul>
+  </nav>
+    <div id="login-page" class="login">
+      <!-- Contenedor principal de inicio de sesión -->
+      <form action="/acceso-login" method="post">
+        <!-- Formulario de inicio de sesión -->
+        <h1>INICIAR SESION</h1>
+        <!-- Título del formulario -->
+        <label for="email">Correo electrónico</label>
+        <!-- Etiqueta del campo de correo electrónico -->
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Escribir Correo"
+        />
+        <!-- Campo de correo electrónico -->
+        <label for="password">Contraseña</label>
+        <!-- Etiqueta del campo de contraseña -->
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Escribir Contraseña"
+        />
+        <!-- Campo de contraseña -->
+        <div class="checkbox-container">
+          <!-- Contenedor para mostrar contraseña -->
+          <input type="checkbox" id="show-password" />
+          <!-- Checkbox para mostrar contraseña -->
+          <label for="show-password">Mostrar contraseña</label>
+          <!-- Etiqueta para mostrar contraseña -->
+        </div>
+        <a href="/inicio" class="login-button">INICIAR</a>
+        <a href="/register" class="register-button">REGISTRARSE</a>
+        <!-- Enlace para registrarse (cambiado a enlace) -->
+      </form>
+    </div>
+    <script>
+      <!-- Script para mostrar/ocultar contraseña -->
+      document
+        .getElementById("show-password")
+        .addEventListener("change", function () {
+          var passwordInput = document.getElementById("password");
+          if (this.checked) {
+            passwordInput.type = "text";
+          } else {
+            passwordInput.type = "password";
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+/* Estilos generales del body */
+body {
+    /* Configuración para centrar los elementos vertical y horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Utiliza el 100% del viewport height */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #000000c5; /* Fondo oscuro semi-transparente */
+}
+
+/* Estilos adicionales para el body */
+body {
+    background: url('https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645_1280.jpg'); /* Fondo de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Ajusta la posición de la imagen al centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    align-items: center; /* Centra horizontalmente los elementos */
+    height: 100vh; /* Utiliza el 100% del viewport height */
+}
+
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login {
+    border: 1px solid black; /* Borde negro */
+    width: 400px; /* Ancho del formulario */
+    padding: 20px; /* Espaciado interno */
+    background: url('https://img.freepik.com/foto-gratis/pizza-napolitana-apetitosa-picante-bordo-tomates-cherry-chile-espacio-libre-texto_78826-2831.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1711411200&semt=ais') no-repeat center; /* Fondo con imagen centrada */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Ajuste para subir la imagen */
+    color: white; /* Texto en blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75); /* Sombra */
+    overflow: hidden; /* Para ocultar elementos que se desbordan */
+    position: relative; /* Posición relativa */
+    margin-top: 50px; /* Margen superior para ajustar la posición */
+}
+
+/* Pseudo-elemento antes del contenedor del formulario */
+.login::before {
+    content: ''; /* Agrega contenido al elemento */
+    position: absolute; /* Posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para mejor contraste */
+    border-radius: 20px;
+}
+
+/* Estilos para el formulario dentro del contenedor .login */
+form {
+    position: relative; /* Posición relativa */
+    z-index: 1; /* Capa z */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    padding: 40px; /* Espaciado interno */
+}
+
+/* Estilos para los títulos */
+h1 {
+    font-weight: normal; /* Peso de la fuente normal */
+    font-size: 24px; /* Tamaño de la fuente */
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5); /* Sombra del texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para las etiquetas */
+label {
+    color: rgba(255,255,255,0.8); /* Color del texto con transparencia */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    font-size: 10px; /* Tamaño de la fuente */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Estilos para los campos de texto */
+input[type="text"],
+input[type="password"] {
+    background: rgba(255,255,255,0.3); /* Fondo con transparencia */
+    height: 40px; /* Altura del campo */
+    line-height: 40px; /* Altura de línea */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 0px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    margin-bottom: 20px; /* Margen inferior */
+    color: white; /* Color del texto */
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5); /* Sombra interna */
+}
+
+/* Placeholder para los campos de texto */
+input::placeholder {
+    color: rgba(255,255,255,0.8); /* Color más oscuro para el placeholder */
+}
+
+/* Contenedor para el checkbox */
+.checkbox-container {
+    display: flex; /* Flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilo para el checkbox */
+.checkbox-container input[type="checkbox"] {
+    width: 16px; /* Ancho */
+    height: 16px; /* Altura */
+    margin-right: 10px; /* Margen derecho */
+    accent-color: #2A7EE7; /* Color del acento */
+}
+
+/* Estilos para los botones de inicio de sesión y registro */
+.login-button,
+.register-button {
+    display: block; /* Bloque */
+    width: 100%; /* Ancho del 100% */
+    background: rgb(255, 255, 255); /* Fondo blanco */
+    height: 40px; /* Altura del botón */
+    line-height: 40px; /* Altura de línea */
+    border-radius: 20px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    color: black; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    cursor: pointer; /* Cursor al pasar */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3); /* Sombra */
+    transition: background 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Sin decoración de texto */
+    text-align: center; /* Alineación del texto */
+}
+
+/* Cambio de color en hover para los botones */
+.login-button:hover,
+.register-button:hover {
+    background: rgba(0, 0, 0, 0.527); /* Cambio de color de fondo al pasar el cursor */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para el contenedor del formulario de registro */
+.registro {
+    border: 1px solid black; /* Borde negro */
+    width: 400px; /* Ancho del formulario */
+    padding: none; /* Sin relleno */
+    background: url('https://img.freepik.com/foto-gratis/pizza-napolitana-apetitosa-picante-bordo-tomates-cherry-chile-espacio-libre-texto_78826-2831.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1711411200&semt=ais') no-repeat center; /* Fondo con imagen centrada */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Ajuste para subir la imagen */
+    color: white; /* Texto en blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75); /* Sombra */
+    overflow: hidden; /* Para ocultar elementos que se desbordan */
+    position: relative; /* Posición relativa */
+}
+
+/* Estilos para la pregunta dentro del formulario de registro */
+.registro h2 a {
+    text-decoration: none; /* Sin decoración de texto */
+    text-align: center; /* Centra el texto */
+    font-size: 19px; /* Tamaño de la fuente */
+    color: #ffffff; /* Color del texto */
+    display: block; /* Hace que el enlace ocupe todo el ancho */
+    margin-top: 3px; /* Margen superior */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Cambio en hover para el enlace */
+.registro h2 a:hover {
+    transform: scale(1.1); /* Agranda el enlace al pasar el mouse */
+}
+
+/* Estilos para el menú principal */
+.menu-principal {
+    background: url('https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645_1280.jpg'); /* Fondo de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Ajusta la posición de la imagen al centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al principio del contenedor */
+    align-items: center; /* Centra horizontalmente los elementos */
+    height: 100vh; /* Utiliza el 100% del viewport height */
+}
+
+/* Estilos para el título principal */
+.titulo-principal {
+    display: flex;
+    justify-content: space-between;
+    color: white; /* Color del texto */
+    font-size: 36px; /* Tamaño de la fuente */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Contenedor para los items */
+.contenedor-items {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño de la pantalla */
+}
+
+/* Estilos para cada elemento de la lista */
+.item {
+    width: 200px; /* Ancho del elemento */
+    margin: 20px; /* Espacio entre elementos */
+    text-align: center; /* Centra el contenido */
+    background-color: #ffffff; /* Color de fondo del elemento */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para las imágenes */
+.item img {
+    width: 100%; /* Ancho de la imagen al 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Cambio en hover para la imagen */
+.item img:hover {
+    transform: scale(1.3); /* Agranda la imagen al pasar el mouse */
+}
+
+/* Estilos para el nombre del producto */
+.item h2 {
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para el precio */
+.item .precio {
+    font-weight: bold; /* Fuente en negrita */
+}
+
+/* Estilos para el botón de realizar pedido */
+.item a {
+    display: inline-block; /* Permite ajustar el tamaño del botón */
+    background-color: #ff5733; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    margin-top: 10px; /* Espacio superior */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Cambio en hover para el botón */
+.item a:hover {
+    transform: scale(1.1); /* Agranda el enlace al pasar el mouse */
+    background-color: #e94515; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.user-form {
+    color: white;
+    background-color: grey;
+    margin: 20px; 
+    padding: 20px; 
+    font-size: larger;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    height: 100px;
+}
+
+.navbar .brand {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: white;
+    color: #333;
+}
+
+.nueva-dir {
+    background-color: grey;
+    text-align: center;
+}
+
+
+/* Estilos para el formulario de pedidos */
+.pedido-formulario {
+    border: 1px solid black; /* Borde negro */
+    width: 400px; /* Ancho del formulario */
+    padding: 20px; /* Espaciado interno */
+    background: url('https://img.freepik.com/foto-gratis/pizza-napolitana-apetitosa-picante-bordo-tomates-cherry-chile-espacio-libre-texto_78826-2831.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1711411200&semt=ais') no-repeat center; /* Fondo con imagen centrada */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Ajuste para subir la imagen */
+    color: white; /* Texto en blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.75); /* Sombra */
+    overflow: hidden; /* Para ocultar elementos que se desbordan */
+    position: relative; /* Posición relativa */
+    margin-top: 20px; /* Margen superior para ajustar la posición */
+}
+
+/* Pseudo-elemento antes del contenedor del formulario de pedidos */
+.pedido-formulario::before {
+    content: ''; /* Agrega contenido al elemento */
+    position: absolute; /* Posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para mejor contraste */
+    border-radius: 20px;
+}
+
+/* Estilos para el formulario dentro del contenedor .pedido-formulario */
+.pedido-formulario form {
+    position: relative; /* Posición relativa */
+    z-index: 1; /* Capa z */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    padding: 40px; /* Espaciado interno */
+}
+
+/* Estilos para los títulos del formulario de pedidos */
+.pedido-formulario h1 {
+    font-weight: normal; /* Peso de la fuente normal */
+    font-size: 24px; /* Tamaño de la fuente */
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5); /* Sombra del texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para las etiquetas del formulario de pedidos */
+.pedido-formulario label {
+    color: rgba(255,255,255,0.8); /* Color del texto con transparencia */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    font-size: 10px; /* Tamaño de la fuente */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Estilos para los campos de texto del formulario de pedidos */
+.pedido-formulario input[type="text"],
+.pedido-formulario input[type="number"],
+.pedido-formulario textarea,
+.pedido-formulario select {
+    background: rgba(255,255,255,0.3); /* Fondo con transparencia */
+    height: 40px; /* Altura del campo */
+    line-height: 40px; /* Altura de línea */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 0px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    margin-bottom: 20px; /* Margen inferior */
+    color: rgb(0, 0, 0); /* Color del texto */
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5); /* Sombra interna */
+}
+
+/* Estilos específicos para el campo de texto del textarea */
+.pedido-formulario textarea {
+    height: 80px; /* Altura específica para textarea */
+    line-height: normal; /* Altura de línea normal para textarea */
+    resize: none; /* Deshabilita el redimensionamiento */
+}
+
+/* Placeholder para los campos de texto del formulario de pedidos */
+.pedido-formulario input::placeholder,
+.pedido-formulario textarea::placeholder {
+    color: rgba(255,255,255,0.8); /* Color más oscuro para el placeholder */
+}
+
+/* Estilos para los botones del formulario de pedidos y enlaces */
+.pedido-formulario .pedido-button,
+.pedido-formulario a {
+    display: block; /* Bloque */
+    width: 100%; /* Ancho del 100% */
+    background: white; /* Fondo naranja */
+    height: 40px; /* Altura del botón */
+    line-height: 40px; /* Altura de línea */
+    border-radius: 20px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    color: black; /* Color del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    cursor: pointer; /* Cursor al pasar */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: background 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Sin decoración de texto */
+    text-align: center; /* Alineación del texto */
+}
+
+/* Cambio de color en hover para los botones del formulario de pedidos y enlaces */
+.pedido-formulario .pedido-button:hover,
+.pedido-formulario a:hover {
+    background: rgba(0, 0, 0, 0.527); /* Cambio de color de fondo al pasar el cursor */
+    color: white; /* Cambia el color del texto a blanco */
+}

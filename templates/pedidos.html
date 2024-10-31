@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEDIDOS</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3132/3132693.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand">Pizzeria</div>
+        <ul class="nav-links">
+            <li><a href="/">Iniciar sesion</a></li>
+            <li><a href="/register">Registro</a></li>
+            <li><a href="/inicio">Pizzas</a></li>
+            <li><a href="/usuarios">Usuarios</a></li>
+            <li><a href="/pedidos">Pedidos</a></li>
+        </ul>
+    </nav>
+    <div class="pedido-formulario">
+        <form action="/pedidos" method="post">
+            <h1>REALIZA TU PEDIDO AQUI</h1>
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="20" step="1" placeholder="Seleccione la cantidad de pizzas">
+            <label for="opciones">Seleccione su pizza</label>
+            <select id="opciones" name="opciones">
+                <option value="opcion1">PIZZA PEPPERONI</option>
+                <option value="opcion2">PIZZA MARGARITA</option>
+                <option value="opcion3">PIZZA FUGAZZETA</option>
+                <option value="opcion4">PIZZA HAWAIANA</option>
+            </select>
+            <label for="text">Correo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu correo de usuario">
+            <input type="submit" class="pedido-button" value="CONFIRMAR PEDIDO" />
+            <a href="/inicio">CANCELAR</a>
+        </form>
+    </div>
+</body>
+
+</html>
